@@ -5,6 +5,8 @@ import { useTranslations } from 'next-intl';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
+import { Eye, Glasses, CircleDot } from 'lucide-react';
+import VantaWaves from './VantaWavesUniversal';
 import { useLocale } from 'next-intl';
 
 if (typeof window !== 'undefined') {
@@ -56,73 +58,75 @@ export default function Services() {
 
     const services = [
         {
-            icon: '👁️',
+            icon: Eye,
             title: t('diagnosis.title'),
             description: t('diagnosis.description'),
         },
         {
-            icon: '👓',
+            icon: Glasses,
             title: t('selection.title'),
             description: t('selection.description'),
         },
         {
-            icon: '🥽',
+            icon: CircleDot,
             title: t('lenses.title'),
             description: t('lenses.description'),
         },
     ];
 
     return (
-        <section
-            id="services"
-            ref={sectionRef}
-            className="py-20 md:py-32 bg-primary-bg"
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2
-                        ref={titleRef}
-                        className="font-lora text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6"
-                    >
-                        {t('title')}
-                    </h2>
-                    <p
-                        ref={subtitleRef}
-                        className="text-lg md:text-xl text-primary-text max-w-2xl mx-auto"
-                    >
-                        {t('subtitle')}
-                    </p>
-                </div>
-
-                <div
-                    ref={cardsRef}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                >
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-custom p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center"
+        <VantaWaves variant="subtle">
+            <section
+                id="services"
+                ref={sectionRef}
+                className="relative py-20 md:py-32 bg-primary-bg"
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2
+                            ref={titleRef}
+                            className="font-lora text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6"
                         >
-                            <div className="text-5xl mb-6">{service.icon}</div>
-                            <h3 className="font-lora text-2xl font-bold text-primary-text mb-4">
-                                {service.title}
-                            </h3>
-                            <p className="text-primary-text opacity-80 leading-relaxed mb-6">
-                                {service.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+                            {t('title')}
+                        </h2>
+                        <p
+                            ref={subtitleRef}
+                            className="text-lg md:text-xl text-primary-text max-w-2xl mx-auto"
+                        >
+                            {t('subtitle')}
+                        </p>
+                    </div>
 
-                <div className="text-center mt-12">
-                    <Link
-                        href={`/${locale}/services`}
-                        className="inline-block bg-primary-accent text-white px-8 py-4 rounded-custom text-lg font-semibold hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                    <div
+                        ref={cardsRef}
+                        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr"
                     >
-                        Все услуги
-                    </Link>
+                        {services.map((service, index) => (
+                            <div
+                                key={index}
+                                className="bg-primary-secondary/80 backdrop-blur-sm rounded-custom p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-primary-accent/20 hover:border-primary-accent/40"
+                            >
+                                <service.icon className="w-12 h-12 mx-auto mb-6 text-primary-accent" />
+                                <h3 className="font-lora text-2xl font-bold text-primary-text mb-4">
+                                    {service.title}
+                                </h3>
+                                <p className="text-primary-text/90 leading-relaxed mb-6">
+                                    {service.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <Link
+                            href={`/${locale}/services`}
+                            className="inline-block bg-primary-accent text-white px-8 py-4 rounded-custom text-lg font-semibold hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                        >
+                            Все услуги
+                        </Link>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </VantaWaves>
     );
 }

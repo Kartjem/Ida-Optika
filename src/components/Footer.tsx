@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useLocale } from 'next-intl';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -9,22 +10,15 @@ export default function Footer() {
     const tNav = useTranslations('nav');
     const tFooter = useTranslations('footer');
     const tContact = useTranslations('contact');
+    const locale = useLocale();
 
     const navItems = [
-        { label: tNav('services'), href: '#services' },
-        { label: tNav('about'), href: '#about' },
-        { label: tNav('glasses'), href: '/glasses' },
-        { label: tNav('contact'), href: '#contact' },
+        { label: tNav('home'), href: `/${locale}` },
+        { label: tNav('services'), href: `/${locale}/services` },
+        { label: tNav('about'), href: `/${locale}/about` },
+        { label: tNav('glasses'), href: `/${locale}/glasses` },
+        { label: tNav('contact'), href: `/${locale}/contact` },
     ];
-
-    const handleNavClick = (href: string) => {
-        if (href.startsWith('#')) {
-            const element = document.getElementById(href.substring(1));
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    };
 
     return (
         <footer className="bg-primary-secondary py-16">
@@ -32,7 +26,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Логотип и описание */}
                     <div className="md:col-span-1">
-                        <Link href="/" className="flex items-center space-x-2 mb-4">
+                        <Link href={`/${locale}`} className="flex items-center space-x-2 mb-4">
                             <Image
                                 src="/favicon/favicon-96x96.png"
                                 alt="Ida Optika"
@@ -57,12 +51,12 @@ export default function Footer() {
                         <ul className="space-y-2">
                             {navItems.map((item) => (
                                 <li key={item.href}>
-                                    <button
-                                        onClick={() => handleNavClick(item.href)}
+                                    <Link
+                                        href={item.href}
                                         className="text-primary-text opacity-80 hover:opacity-100 hover:text-primary-accent transition-colors duration-200"
                                     >
                                         {item.label}
-                                    </button>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -80,12 +74,6 @@ export default function Footer() {
                                 className="block hover:text-primary-accent transition-colors duration-200"
                             >
                                 +372 357 9233
-                            </a>
-                            <a
-                                href="mailto:info@idaoptika.ee"
-                                className="block hover:text-primary-accent transition-colors duration-200"
-                            >
-                                info@idaoptika.ee
                             </a>
                         </div>
                     </div>
@@ -110,7 +98,6 @@ export default function Footer() {
                             {tFooter('copyright')}
                         </p>
                         <div className="flex space-x-4 mt-4 md:mt-0">
-                            {/* Ссылки на социальные сети (если нужны) */}
                         </div>
                     </div>
                 </div>

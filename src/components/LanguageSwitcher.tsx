@@ -5,8 +5,8 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
 const languages = [
-    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-    { code: 'et', name: 'Eesti', flag: '🇪🇪' }
+    { code: 'ru', name: 'Русский' },
+    { code: 'et', name: 'Eesti' }
 ];
 
 export default function LanguageSwitcher() {
@@ -31,7 +31,6 @@ export default function LanguageSwitcher() {
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-primary-secondary transition-colors duration-200"
             >
-                <span className="text-lg">{currentLanguage?.flag}</span>
                 <span className="text-sm font-medium text-primary-text">
                     {currentLanguage?.code.toUpperCase()}
                 </span>
@@ -60,7 +59,6 @@ export default function LanguageSwitcher() {
                             className={`w-full flex items-center space-x-3 px-4 py-3 hover:bg-primary-bg transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg ${currentLocale === language.code ? 'bg-primary-bg' : ''
                                 }`}
                         >
-                            <span className="text-lg">{language.flag}</span>
                             <span className="text-sm font-medium text-primary-text">
                                 {language.name}
                             </span>

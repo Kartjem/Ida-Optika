@@ -3,11 +3,12 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { Glasses as GlassesIcon } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import VantaWaves from '@/components/VantaWavesUniversal';
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -19,37 +20,37 @@ const glassFrames = [
         id: '1',
         brand: 'Ray-Ban',
         model: 'Aviator Classic',
-        image: '/assets/images/home/sample.jpg',
+        image: '',
     },
     {
         id: '2',
         brand: 'Gucci',
         model: 'GG0061S',
-        image: '/assets/images/home/sample.jpg',
+        image: '',
     },
     {
         id: '3',
         brand: 'Prada',
         model: 'PR 01VS',
-        image: '/assets/images/home/sample.jpg',
+        image: '',
     },
     {
         id: '4',
         brand: 'Oakley',
         model: 'Holbrook',
-        image: '/assets/images/home/sample.jpg',
+        image: '',
     },
     {
         id: '5',
         brand: 'Tom Ford',
         model: 'FT5178',
-        image: '/assets/images/home/sample.jpg',
+        image: '',
     },
     {
         id: '6',
         brand: 'Persol',
         model: 'PO3166S',
-        image: '/assets/images/home/sample.jpg',
+        image: '',
     },
 ];
 
@@ -58,6 +59,7 @@ export default function GlassesPage() {
     const subtitleRef = useRef<HTMLParagraphElement>(null);
     const gridRef = useRef<HTMLDivElement>(null);
     const locale = useLocale();
+    const t = useTranslations('pages.glasses');
 
     useEffect(() => {
         // Анимация заголовка
@@ -93,7 +95,7 @@ export default function GlassesPage() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-primary-bg">
+        <VantaWaves variant="page" className="min-h-screen bg-primary-bg">
             <Navigation />
 
             {/* Заголовок страницы */}
@@ -103,13 +105,13 @@ export default function GlassesPage() {
                         ref={titleRef}
                         className="font-lora text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-6"
                     >
-                        Галерея оправ
+                        {t('title')}
                     </h1>
                     <p
                         ref={subtitleRef}
                         className="text-lg md:text-xl text-primary-text max-w-2xl mx-auto"
                     >
-                        Откройте для себя нашу коллекцию премиальных оправ от ведущих мировых брендов
+                        {t('subtitle')}
                     </p>
                 </div>
             </section>
@@ -126,16 +128,12 @@ export default function GlassesPage() {
                                 key={frame.id}
                                 className="group cursor-pointer"
                             >
-                                <div className="relative aspect-square overflow-hidden rounded-custom bg-primary-secondary">
-                                    <Image
-                                        src={frame.image}
-                                        alt={`${frame.brand} ${frame.model}`}
-                                        fill
-                                        className="object-cover transition-transform duration-300 group-hover:scale-110"
-                                    />
-
+                                <div className="relative aspect-square overflow-hidden rounded-custom bg-gradient-to-br from-primary-secondary to-primary-accent/20">
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <GlassesIcon className="w-16 h-16 text-primary-text opacity-40 group-hover:opacity-70 transition-opacity" />
+                                    </div>
                                     {/* Оверлей с информацией */}
-                                    <div className="absolute inset-0 bg-primary-text bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-primary-text/0 group-hover:bg-primary-text/80 transition-all duration-300 flex items-center justify-center">
                                         <div className="text-center text-primary-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                             <h3 className="font-lora text-2xl font-bold mb-2">
                                                 {frame.brand}
@@ -172,13 +170,13 @@ export default function GlassesPage() {
                             href={`/${locale}`}
                             className="inline-block border-2 border-primary-accent text-primary-accent px-8 py-4 rounded-custom text-lg font-semibold hover:bg-primary-accent hover:text-white transition-all duration-300"
                         >
-                            Вернуться на главную
+                            {t('back_home')}
                         </Link>
                     </div>
                 </div>
             </section>
 
             <Footer />
-        </div>
+        </VantaWaves>
     );
 }

@@ -8,13 +8,12 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// // Ida Optika цветовая палитра
-				// primary: {
-				// 	bg: '#FDF8F0',        // Нежный теплый бежевый
-				// 	text: '#40322C',      // Глубокий теплый коричневый
-				// 	accent: '#A67B5B',    // Приглушенный благородный коричневый
-				// 	secondary: '#D9C6B5', // Светло-бежевый для секций
-				// },
+				// CSS-переменные, управляемые через data-theme в globals.css
+				'primary-bg': 'var(--color-bg)',
+				'primary-secondary': 'var(--color-bg-secondary)',
+				'primary-text': 'var(--color-text)',
+				'primary-accent': 'var(--color-primary)',
+				'primary-border': 'var(--color-border)'
 			},
 			fontFamily: {
 				'lora': ['Lora', 'serif'],
@@ -28,6 +27,8 @@ module.exports = {
 				'fade-in': 'fadeIn 0.6s ease-out forwards',
 				'slide-up': 'slideUp 0.8s ease-out forwards',
 				'marquee': 'marquee 25s linear infinite',
+				'gradient-shift': 'gradient-shift 10s ease infinite',
+				'wave-float': 'wave-float 6s ease-in-out infinite',
 			},
 			keyframes: {
 				fadeUp: {
@@ -64,6 +65,22 @@ module.exports = {
 					},
 					'100%': {
 						transform: 'translateX(-100%)',
+					},
+				},
+				'gradient-shift': {
+					'0%, 100%': {
+						'background-position': '0% 50%',
+					},
+					'50%': {
+						'background-position': '100% 50%',
+					},
+				},
+				'wave-float': {
+					'0%, 100%': {
+						transform: 'translateY(0px) rotate(0deg)',
+					},
+					'50%': {
+						transform: 'translateY(-20px) rotate(180deg)',
 					},
 				},
 			},

@@ -7,13 +7,10 @@ import Services from '@/components/Services';
 import BrandsMarquee from '@/components/BrandsMarquee';
 import Team from '@/components/Team';
 import GalleryCTA from '@/components/GalleryCTA';
-import FAQ from '@/components/FAQ';
-import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 export default function HomePage() {
     useEffect(() => {
-        // Добавим плавный скролл через CSS
         document.documentElement.style.scrollBehavior = 'smooth';
 
         return () => {
@@ -29,8 +26,6 @@ export default function HomePage() {
             <BrandsMarquee />
             <Team />
             <GalleryCTA />
-            <FAQ />
-            <Contact />
             <Footer />
         </main>
     );

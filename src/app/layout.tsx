@@ -1,5 +1,6 @@
 import { Inter, Lora } from 'next/font/google';
 import './globals.css';
+import SmoothScroll from '@/components/SmoothScroll';
 
 const inter = Inter({
     subsets: ['latin', 'cyrillic'],
@@ -12,7 +13,7 @@ const lora = Lora({
 });
 
 export const metadata = {
-    title: 'Ida Optika - Премиальная оптика в Нарве',
+    title: 'Ida Optika',
     description: 'Ida Optika - ваши эксперты по здоровью и стилю зрения в Нарве. Персональный подбор очков, диагностика зрения, контактные линзы.',
     icons: {
         icon: [
@@ -23,12 +24,15 @@ export const metadata = {
         apple: [
             { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
         ],
-        other: [
-            { url: '/favicon/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
-            { url: '/favicon/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' }
-        ]
+        shortcut: '/favicon/favicon.ico'
     },
-    manifest: '/favicon/site.webmanifest',
+    manifest: '/favicon/site.webmanifest'
+};
+
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    themeColor: '#1a1a1a'
 };
 
 export default function RootLayout({
@@ -38,7 +42,8 @@ export default function RootLayout({
 }) {
     return (
         <html className={`${inter.variable} ${lora.variable}`}>
-            <body className="font-inter antialiased" data-theme="alabaster">
+            <body className="font-inter antialiased" data-theme="graphite_dark">
+                <SmoothScroll />
                 {children}
             </body>
         </html>

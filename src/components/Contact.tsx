@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import BackgroundDecor from './BackgroundDecor';
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -39,8 +40,9 @@ export default function Contact() {
         <section
             id="contact"
             ref={sectionRef}
-            className="py-20 md:py-32 bg-primary-text text-primary-bg"
+            className="relative py-20 md:py-32 bg-primary-text text-primary-bg"
         >
+            <BackgroundDecor variant="contrast" />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div ref={contentRef}>
                     <h2 className="font-lora text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
