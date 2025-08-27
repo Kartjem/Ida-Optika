@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------- */
+/* 1. ИМПОРТ ШРИФТОВ И ОСНОВНЫЕ НАСТРОЙКИ
+/* ---------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-inter: 'Inter', sans-serif;
+    --font-lora: 'Lora', serif;
+    
+    /* * =============================================
+     * ЦВЕТОВАЯ СХЕМА: "Алебастр и Рубин" (по умолчанию)
+     * Светлая, чистая и современная палитра.
+     * =============================================
+    */
+    --color-bg: #F7F5F2; /* Теплый светло-бежевый (Алебастр) */
+    --color-bg-secondary: #FFFFFF; /* Чистый белый для контраста на карточках */
+    --color-text: #2D2D2D; /* Очень темный, теплый серый (почти черный) */
+    --color-text-muted: #78716C; /* Приглушенный серо-бежевый */
+    --color-primary: #DC2626; /* Яркий, но благородный красный (Рубин) */
+    --color-primary-hover: #B91C1C; /* Более глубокий красный при наведении */
+    --color-border: #E7E5E4; /* Мягкая граница в тон фона */
+}
+
+/* * =============================================
+ * ЦВЕТОВАЯ СХЕМА: "Бордо и Графит" (Темная)
+ * Для активации: <body data-theme="graphite_dark">
+ * Роскошная, статусная и сфокусированная палитра.
+ * =============================================
+*/
+[data-theme="graphite_dark"] {
+    --color-bg: #1A1A1A; /* Глубокий графитовый */
+    --color-bg-secondary: #242424; /* Чуть светлее для секций */
+    --color-text: #F5F5F5; /* Мягкий белый для текста */
+    --color-text-muted: #A3A3A3; /* Светло-серый для второстепенного текста */
+    --color-primary: #B91C1C; /* Насыщенный винный (Бордо) */
+    --color-primary-hover: #991B1B; /* Еще более глубокий винный */
+    --color-border: #3D3D3D; /* Едва заметная темная граница */
+}
+
+/* * =============================================
+ * ЦВЕТОВАЯ СХЕМА: "Терракота и Сталь"
+ * Для активации: <body data-theme="steel">
+ * Сдержанная, стильная и современная палитра.
+ * =============================================
+*/
+[data-theme="steel"] {
+    --color-bg: #EDEDED; /* Светлый стальной серый */
+    --color-bg-secondary: #F5F5F5; /* Почти белый для карточек */
+    --color-text: #36454F; /* Холодный темно-серый (Charcoal Slate) */
+    --color-text-muted: #848484; /* Средний серый */
+    --color-primary: #C15B51; /* Приглушенный землистый красный (Терракота) */
+    --color-primary-hover: #A2473D; /* Более темный терракотовый */
+    --color-border: #D9D9D9; /* Светло-серая граница */
+}
+
+
+/* ---------------------------------------------- */
+/* 2. ГЛОБАЛЬНЫЕ СТИЛИ (без изменений)
+/* ---------------------------------------------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-inter);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-lora);
+    color: var(--color-text);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+
+/* ---------------------------------------------- */
+/* 3. АНИМАЦИИ (без изменений)
+/* ---------------------------------------------- */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes marquee { from { transform: translateX(0%); } to { transform: translateX(-100%); } }
+
+/* ---------------------------------------------- */
+/* 4. КАСТОМНЫЕ УТИЛИТЫ @apply (адаптируются автоматически)
+/* ---------------------------------------------- */
+@layer components {
+    .btn-primary {
+        @apply inline-block px-8 py-3 text-center font-semibold rounded-xl transition-all duration-300;
+        background-color: var(--color-primary);
+        /* Для темной темы текст на кнопке станет темным, для светлой - светлым. Универсально! */
+        color: var(--color-bg); 
+    }
+    .btn-primary:hover {
+        background-color: var(--color-primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-secondary {
+        @apply inline-block px-8 py-3 text-center font-semibold rounded-xl transition-all duration-300;
+        background-color: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+    }
+    .btn-secondary:hover {
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+    }
+    
+    .section-bg { background-color: var(--color-bg-secondary); }
+    
+    .gradient-text {
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-text) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    .glass-effect {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: color-mix(in srgb, var(--color-bg) 80%, transparent);
+        border-bottom: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.animated { opacity: 1; transform: translateY(0); }
+
+    .custom-card {
+        @apply rounded-2xl p-6 transition-all duration-300;
+        background-color: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+    }
+    .custom-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px color-mix(in srgb, var(--color-border) 50%, transparent);
+        border-color: var(--color-primary);
+    }
+}
