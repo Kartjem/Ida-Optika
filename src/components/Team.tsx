@@ -67,7 +67,6 @@ export default function Team() {
     }, []);
 
     return (
-        <VantaWaves>
             <section
                 id="about"
                 ref={sectionRef}
@@ -77,7 +76,7 @@ export default function Team() {
                     <div className="text-center mb-16">
                         <h2
                             ref={titleRef}
-                            className="font-lora text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6"
+                            className="font-bold text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6"
                         >
                             {t('title')}
                         </h2>
@@ -102,7 +101,7 @@ export default function Team() {
                                     <member.icon className="w-24 h-24 text-primary-accent" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary-text/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 </div>
-                                <h3 className="font-lora text-2xl font-semibold text-primary-text mb-2">
+                                <h3 className="font-bold text-2xl font-semibold text-primary-text mb-2">
                                     {member.name}
                                 </h3>
                                 <p className="text-primary-accent text-lg">
@@ -113,6 +112,5 @@ export default function Team() {
                     </div>
                 </div>
             </section>
-        </VantaWaves>
     );
 }

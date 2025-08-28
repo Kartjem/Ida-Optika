@@ -94,7 +94,7 @@ export default function ContactPage() {
             <section className="relative pt-32 pb-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div ref={heroRef} className="text-center">
-                        <h1 className="font-lora text-5xl md:text-6xl lg:text-7xl font-bold text-secondary-text mb-6">
+                        <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl font-bold text-secondary-text mb-6">
                             Контакты
                         </h1>
                         <p className="text-lg md:text-xl text-secondary-text max-w-3xl mx-auto">
@@ -108,7 +108,7 @@ export default function ContactPage() {
             {/* Контактная информация */}
             <section className="relative py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="font-lora text-3xl md:text-4xl font-bold text-secondary-text text-center mb-12">
+                    <h2 className="font-bold text-3xl md:text-4xl font-bold text-secondary-text text-center mb-12">
                         Контактная информация
                     </h2>
                     <div
@@ -121,7 +121,7 @@ export default function ContactPage() {
                                 className="bg-primary-secondary/80 backdrop-blur-sm rounded-custom p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-accent/20 hover:border-primary-accent/40"
                             >
                                 <div className="text-primary-accent mb-4 flex justify-center">{method.icon}</div>
-                                <h3 className="font-lora text-xl font-bold text-secondary-text mb-3">
+                                <h3 className="font-bold text-xl font-bold text-secondary-text mb-3">
                                     {method.title}
                                 </h3>
                                 {method.action ? (
@@ -157,14 +157,14 @@ export default function ContactPage() {
             {/* Google карта */}
             <section className="relative py-20 bg-primary-secondary/30">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="font-lora text-3xl md:text-4xl font-bold text-secondary-text text-center mb-12">
+                    <h2 className="font-bold text-3xl md:text-4xl font-bold text-secondary-text text-center mb-12">
                         Как нас найти
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <GoogleMap className="w-full" />
                         <div className="space-y-6 text-secondary-text">
                             <div className="bg-primary-secondary/80 rounded-custom p-6 shadow-lg">
-                                <h3 className="font-lora text-xl font-bold text-secondary-text mb-4">
+                                <h3 className="font-bold text-xl font-bold text-secondary-text mb-4">
                                     Удобное расположение
                                 </h3>
                                 <ul className="space-y-3 text-secondary-text">
@@ -187,7 +187,7 @@ export default function ContactPage() {
                                 </ul>
                             </div>
                             <div className="bg-primary-secondary/80 rounded-custom p-6 shadow-lg">
-                                <h3 className="font-lora text-xl font-bold text-secondary-text mb-4">
+                                <h3 className="font-bold text-xl font-bold text-secondary-text mb-4">
                                     Ориентиры
                                 </h3>
                                 <ul className="space-y-2 text-secondary-text text-sm">

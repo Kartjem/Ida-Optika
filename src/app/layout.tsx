@@ -9,7 +9,7 @@ const inter = Inter({
 
 const lora = Lora({
     subsets: ['latin', 'cyrillic'],
-    variable: '--font-lora',
+    variable: '--font-bold',
 });
 
 export const metadata = {

@@ -53,8 +53,8 @@ export default function Navigation() {
                                 height={50}
                                 className="w-auto h-12 rounded-lg"
                             />
-                            <span className="font-lora text-2xl font-bold text-primary-text">
-                                Ida Optika
+                            <span className="font-bold text-2xl font-bold text-primary-text brand-name">
+                                <span className="ida">IDA</span> <span className="optika">OPTIKA</span>
                             </span>
                         </Link>
 

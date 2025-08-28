@@ -23,7 +23,7 @@ export default function ServicesPage() {
             <section className="relative pt-32 pb-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div ref={heroRef} className="text-center">
-                        <h1 className="font-lora text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-6">
+                        <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-6">
                             Наши услуги
                         </h1>
                         <p className="text-lg md:text-xl text-primary-text max-w-3xl mx-auto">
@@ -46,7 +46,7 @@ export default function ServicesPage() {
                                 className="bg-primary-secondary/80 backdrop-blur-sm rounded-custom p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-accent/20 hover:border-primary-accent/40 w-full max-w-sm"
                             >
                                 <service.icon className="w-12 h-12 mb-4 text-primary-accent" />
-                                <h3 className="font-lora text-2xl font-bold text-primary-text mb-4">
+                                <h3 className="font-bold text-2xl font-bold text-primary-text mb-4">
                                     {service.title}
                                 </h3>
                                 <p className="text-primary-text/90 mb-6 leading-relaxed">
@@ -83,11 +83,11 @@ export default function ServicesPage() {
             <section className="relative py-20 bg-primary-secondary/30">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div ref={ctaRef}>
-                        <h2 className="font-lora text-4xl md:text-5xl font-bold text-primary-text mb-6">
+                        <h2 className="font-bold text-4xl md:text-5xl font-bold text-primary-text mb-6">
                             Записаться на прием
                         </h2>
                         <p className="text-lg md:text-xl text-primary-text mb-8 max-w-2xl mx-auto">
-                            Свяжитесь с нами, чтобы записаться на консультацию или диагностику зрения
+                            Свяжитесь с нами,    чтобы записаться на консультацию или диагностику зрения
                         </p>
                         <a
                             href="/contact"

@@ -45,7 +45,7 @@ export default function GalleryCTA() {
         >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div ref={contentRef}>
-                    <h2 className="font-lora text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6">
+                    <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6">
                         {t('title')}
                     </h2>
                     <p className="text-lg md:text-xl text-primary-text mb-12 max-w-2xl mx-auto">

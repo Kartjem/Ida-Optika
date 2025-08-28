@@ -45,21 +45,21 @@ export default function Hero() {
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1
                     ref={titleRef}
-                    className="font-lora text-5xl md:text-7xl lg:text-8xl font-bold gradient-text mb-6"
+                    className="font-bold text-5xl md:text-7xl lg:text-8xl font-bold mb-6 brand-name"
                 >
-                    {t('title')}
+                    <span className="ida">IDA</span> <span className="optika">OPTIKA</span>
                 </h1>
 
                 <p
                     ref={subtitleRef}
-                    className="font-lora text-xl md:text-2xl lg:text-3xl text-primary-accent mb-8"
+                    className="font-bold text-xl md:text-2xl lg:text-3xl text-primary-accent mb-8"
                 >
                     {t('subtitle')}
                 </p>
 
                 <p
                     ref={descriptionRef}
-                    className="text-lg md:text-xl text-primary-text max-w-2xl mx-auto mb-12 leading-relaxed"
+                    className="text-lg md:text-xl text-primary. -text max-w-2xl mx-auto mb-12 leading-relaxed"
                 >
                     {t('description')}
                 </p>

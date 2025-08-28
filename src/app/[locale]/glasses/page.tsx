@@ -103,7 +103,7 @@ export default function GlassesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1
                         ref={titleRef}
-                        className="font-lora text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-6"
+                        className="font-bold text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-6"
                     >
                         {t('title')}
                     </h1>
@@ -135,7 +135,7 @@ export default function GlassesPage() {
                                     {/* Оверлей с информацией */}
                                     <div className="absolute inset-0 bg-primary-text/0 group-hover:bg-primary-text/80 transition-all duration-300 flex items-center justify-center">
                                         <div className="text-center text-primary-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <h3 className="font-lora text-2xl font-bold mb-2">
+                                            <h3 className="font-bold text-2xl font-bold mb-2">
                                                 {frame.brand}
                                             </h3>
                                             <p className="text-lg">
@@ -153,7 +153,7 @@ export default function GlassesPage() {
             {/* CTA секция */}
             <section className="py-20 bg-primary-secondary">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="font-lora text-4xl md:text-5xl font-bold text-primary-text mb-6">
+                    <h2 className="font-bold text-4xl md:text-5xl font-bold text-primary-text mb-6">
                         Понравилась модель?
                     </h2>
                     <p className="text-lg md:text-xl text-primary-text mb-8">

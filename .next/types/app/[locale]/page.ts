@@ -1,4 +1,4 @@
-// File: /Users/kartjem/Downloads/navigator/src/app/[locale]/page.tsx
+// File: /Users/kartjem/ida-optika-website/optika/src/app/[locale]/page.tsx
 import * as entry from '../../../../src/app/[locale]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

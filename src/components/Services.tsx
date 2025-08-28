@@ -75,56 +75,56 @@ export default function Services() {
     ];
 
     return (
-            <section
-                id="services"
-                ref={sectionRef}
-                className="relative py-20 md:py-32 bg-primary-bg"
-            >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2
-                            ref={titleRef}
-                            className="font-lora text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6"
-                        >
-                            {t('title')}
-                        </h2>
-                        <p
-                            ref={subtitleRef}
-                            className="text-lg md:text-xl text-primary-text max-w-2xl mx-auto"
-                        >
-                            {t('subtitle')}
-                        </p>
-                    </div>
-
-                    <div
-                        ref={cardsRef}
-                        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr"
+        <section
+            id="services"
+            ref={sectionRef}
+            className="relative py-20 md:py-32 bg-primary-bg"
+        >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2
+                        ref={titleRef}
+                        className="font-bold text-4xl md:text-5xl lg:text-6xl font-bold text-primary-text mb-6"
                     >
-                        {services.map((service, index) => (
-                            <div
-                                key={index}
-                                className="bg-primary-secondary/80 backdrop-blur-sm rounded-custom p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-primary-accent/20 hover:border-primary-accent/40"
-                            >
-                                <service.icon className="w-12 h-12 mx-auto mb-6 text-primary-accent" />
-                                <h3 className="font-lora text-2xl font-bold text-primary-text mb-4">
-                                    {service.title}
-                                </h3>
-                                <p className="text-primary-text/90 leading-relaxed mb-6">
-                                    {service.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="text-center mt-12">
-                        <Link
-                            href={`/${locale}/services`}
-                            className="inline-block bg-primary-accent text-white px-8 py-4 rounded-custom text-lg font-semibold hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg"
-                        >
-                            Все услуги
-                        </Link>
-                    </div>
+                        {t('title')}
+                    </h2>
+                    <p
+                        ref={subtitleRef}
+                        className="text-lg md:text-xl text-primary-text max-w-2xl mx-auto"
+                    >
+                        {t('subtitle')}
+                    </p>
                 </div>
-            </section>
+
+                <div
+                    ref={cardsRef}
+                    className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 auto-rows-fr"
+                >
+                    {services.map((service, index) => (
+                        <div
+                            key={index}
+                            className="bg-primary-secondary/80 backdrop-blur-sm rounded-custom p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-primary-accent/20 hover:border-primary-accent/40"
+                        >
+                            <service.icon className="w-12 h-12 mx-auto mb-6 text-primary-accent" />
+                            <h3 className="font-bold text-2xl font-bold text-primary-text mb-4">
+                                {service.title}
+                            </h3>
+                            <p className="text-primary-text/90 leading-relaxed mb-6">
+                                {service.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <Link
+                        href={`/${locale}/services`}
+                        className="inline-block bg-primary-accent text-white px-8 py-4 rounded-custom text-lg font-semibold hover:bg-opacity-90 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                    >
+                        Все услуги
+                    </Link>
+                </div>
+            </div>
+        </section>
     );
 }

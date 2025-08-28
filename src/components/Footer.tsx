@@ -34,8 +34,8 @@ export default function Footer() {
                                 height={40}
                                 className="w-auto h-10 rounded-lg"
                             />
-                            <span className="font-lora text-xl font-bold text-primary-text">
-                                Ida Optika
+                            <span className="font-bold text-xl font-bold text-primary-text brand-name">
+                                <span className="ida">IDA</span> <span className="optika">OPTIKA</span>
                             </span>
                         </Link>
                         <p className="text-primary-text opacity-80 leading-relaxed">

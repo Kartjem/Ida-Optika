@@ -45,7 +45,7 @@ export default function Contact() {
             <BackgroundDecor variant="contrast" />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div ref={contentRef}>
-                    <h2 className="font-lora text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+                    <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
                         {t('title')}
                     </h2>
 

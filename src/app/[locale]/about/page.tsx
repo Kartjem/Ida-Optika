@@ -53,7 +53,7 @@ export default function AboutPage() {
             <section className="relative pt-32 pb-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div ref={heroRef} className="text-center">
-                        <h1 className="font-lora text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-6">
+                        <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl font-bold text-primary-text mb-6">
                             {t('pages.about.title')}
                         </h1>
                         <p className="text-lg md:text-xl text-primary-text max-w-3xl mx-auto">
@@ -68,12 +68,12 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div ref={storyRef}>
-                            <h2 className="font-lora text-4xl md:text-5xl font-bold text-primary-text mb-6">
+                            <h2 className="font-bold text-4xl md:text-5xl font-bold text-primary-text mb-6">
                                 {t('pages.about.story_title')}
                             </h2>
                             <div className="space-y-4 text-primary-text leading-relaxed">
                                 <p>
-                                    Ida Optika была основана в 2012 году с простой миссией — предоставить
+                                    <span className="text-red-600 font-bold">Ida</span> <span className="text-primary-text font-bold">Optika</span> была основана в 2012 году с простой миссией — предоставить
                                     жителям Нарвы доступ к качественным оптическим услугам и современным
                                     технологиям диагностики зрения.
                                 </p>
@@ -84,7 +84,7 @@ export default function AboutPage() {
                                     в области оптометрии.
                                 </p>
                                 <p>
-                                    Сегодня Ida Optika — это современный оптический центр,
+                                    Сегодня <span className="text-red-600 font-bold">Ida</span> <span className="text-primary-text font-bold">Optika</span> — это современный оптический центр,
                                     предлагающий широкий выбор
                                     премиальных брендов очков и контактных линз.
                                 </p>
@@ -108,7 +108,7 @@ export default function AboutPage() {
             {/* Достижения */}
             <section className="relative py-20 bg-primary-secondary/30">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="font-lora text-4xl md:text-5xl font-bold text-primary-text text-center mb-16">
+                    <h2 className="font-bold text-4xl md:text-5xl font-bold text-primary-text text-center mb-16">
                         {t('pages.about.achievements_title')}
                     </h2>
                     <div
@@ -117,7 +117,7 @@ export default function AboutPage() {
                     >
                         {achievements.map((achievement, index) => (
                             <div key={index} className="text-center">
-                                <div className="font-lora text-4xl md:text-5xl font-bold text-primary-accent mb-2">
+                                <div className="font-bold text-4xl md:text-5xl font-bold text-primary-accent mb-2">
                                     {achievement.number}
                                 </div>
                                 <div className="text-primary-text font-medium">

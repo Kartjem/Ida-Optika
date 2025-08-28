@@ -80,5 +80,5 @@ export const NAVIGATION_ITEMS = [
 ];
 
 export const VANTA_COLORS = {
-    hero: 0x6f88,    // Мятный белый (#F0F8F8)
+    hero: 0x4F46E5,
 };
