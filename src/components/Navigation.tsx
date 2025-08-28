@@ -47,7 +47,7 @@ export default function Navigation() {
                         {/* Логотип */}
                         <Link href={`/${locale}`} className="flex items-center space-x-2">
                             <Image
-                                src="/favicon/favicon-96x96.png"
+                                src="/favicon/icon.svg"
                                 alt="Ida Optika"
                                 width={50}
                                 height={50}

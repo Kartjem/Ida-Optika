@@ -8,7 +8,7 @@
     --font-inter: 'Inter', sans-serif;
     --font-lora: 'Lora', serif;
 
-    --color-bg: #1A1A1A;
+    --color-bg: #1A1A1A;  
     --color-bg-secondary: #242424;
     --color-text: #F5F5F5;
     --color-text-muted: #A3A3A3;
@@ -254,7 +254,7 @@ a:hover {
     width: 200%;
     height: 200%;
     background: radial-gradient(ellipse at center,
-            rgba(138, 43, 226, 0.1) 0%,
+            rgba(255, 61, 61, 0.1) 0%,
             rgba(138, 43, 226, 0.05) 30%,
             transparent 70%);
     border-radius: 50%;

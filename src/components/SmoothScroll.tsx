@@ -6,7 +6,7 @@ import Lenis from 'lenis';
 export default function SmoothScroll() {
     useEffect(() => {
         const lenis = new Lenis({
-            duration: 1.1,
+            duration: 1.5,
             smoothWheel: true,
         });
 

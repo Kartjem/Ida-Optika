@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { VANTA_COLORS } from '@/constants';
 
 interface VantaWavesProps {
     className?: string;
@@ -67,7 +68,7 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
             switch (variant) {
                 case 'hero':
                     return {
-                        color: 0x2a2a2a,
+                        color: VANTA_COLORS.hero,
                         shininess: 30.00,
                         waveHeight: 25.00,
                         waveSpeed: 0.60,
@@ -75,7 +76,7 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
                     };
                 case 'subtle':
                     return {
-                        color: 0x1a1a1a,
+                        color: VANTA_COLORS.subtle,
                         shininess: 15.00,
                         waveHeight: 10.00,
                         waveSpeed: 0.30,
@@ -83,7 +84,7 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
                     };
                 default: // 'page'
                     return {
-                        color: 0x252525,
+                        color: VANTA_COLORS.page,
                         shininess: 20.00,
                         waveHeight: 15.00,
                         waveSpeed: 0.40,
@@ -95,14 +96,14 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
         const initVanta = async () => {
             try {
                 await loadScripts();
-                
+
                 if (!isMounted || !vantaRef.current || vantaEffect.current) return;
 
                 console.log('Initializing VANTA effect...');
 
                 if (window.VANTA && window.VANTA.WAVES) {
                     const config = getVariantConfig();
-                    
+
                     vantaEffect.current = window.VANTA.WAVES({
                         el: vantaRef.current,
                         mouseControls: true,
@@ -114,7 +115,7 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
                         scaleMobile: 1.00,
                         ...config
                     });
-                    
+
                     console.log('VANTA effect created:', vantaEffect.current);
                 } else {
                     console.error('VANTA.WAVES not available');
@@ -142,10 +143,10 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
     }, [variant]);
 
     return (
-        <div 
-            ref={vantaRef} 
+        <div
+            ref={vantaRef}
             className={`relative w-full h-full ${className}`}
-            style={{ 
+            style={{
                 minHeight: variant === 'hero' ? '100vh' : '50vh',
                 width: '100%',
                 position: 'relative',

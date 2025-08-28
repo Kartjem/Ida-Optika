@@ -28,7 +28,7 @@ export default function Footer() {
                     <div className="md:col-span-1">
                         <Link href={`/${locale}`} className="flex items-center space-x-2 mb-4">
                             <Image
-                                src="/favicon/favicon-96x96.png"
+                                src="/favicon/icon.svg"
                                 alt="Ida Optika"
                                 width={40}
                                 height={40}

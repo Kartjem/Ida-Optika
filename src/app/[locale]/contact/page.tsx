@@ -66,24 +66,24 @@ export default function ContactPage() {
         );
 
         // Анимация контактов
-        if (contactRef.current) {
-            gsap.fromTo(contactRef.current.children,
-                { opacity: 0, y: 30 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.8,
-                    ease: 'power2.out',
-                    stagger: 0.1,
-                    scrollTrigger: {
-                        trigger: contactRef.current,
-                        start: 'top 80%',
-                        end: 'bottom 20%',
-                        toggleActions: 'play none none reverse',
-                    },
-                }
-            );
-        }
+        // if (contactRef.current) {
+        //     gsap.fromTo(contactRef.current.children,
+        //         { opacity: 0, y: 30 },
+        //         {
+        //             opacity: 1,
+        //             y: 0,
+        //             duration: 0.8,
+        //             ease: 'power2.out',
+        //             stagger: 0.1,
+        //             scrollTrigger: {
+        //                 trigger: contactRef.current,
+        //                 start: 'top 80%',
+        //                 end: 'bottom 20%',
+        //                 toggleActions: 'play none none reverse',
+        //             },
+        //         }
+        //     );
+        // }
     }, []);
 
     return (
@@ -163,7 +163,7 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <GoogleMap className="w-full" />
                         <div className="space-y-6 text-secondary-text">
-                            <div className="bg-white rounded-custom p-6 shadow-lg">
+                            <div className="bg-primary-secondary/80 rounded-custom p-6 shadow-lg">
                                 <h3 className="font-lora text-xl font-bold text-secondary-text mb-4">
                                     Удобное расположение
                                 </h3>
@@ -186,12 +186,12 @@ export default function ContactPage() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="bg-white rounded-custom p-6 shadow-lg">
+                            <div className="bg-primary-secondary/80 rounded-custom p-6 shadow-lg">
                                 <h3 className="font-lora text-xl font-bold text-secondary-text mb-4">
                                     Ориентиры
                                 </h3>
                                 <ul className="space-y-2 text-secondary-text text-sm">
-                                    <li>• Рядом с главным входом</li>
+                                    <li>Рядом с главным входом</li>
                                 </ul>
                             </div>
                         </div>

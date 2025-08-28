@@ -93,9 +93,11 @@ export default function AboutPage() {
                         <div className="relative">
                             <div className="w-full h-96 bg-gradient-to-br from-primary-secondary to-primary-accent rounded-custom shadow-lg flex items-center justify-center">
                                 <div className="text-center text-primary-text">
-                                    <Glasses className="w-16 h-16 mx-auto mb-4 text-primary-text" />
-                                    <p className="text-lg font-semibold">Ida Optika</p>
-                                    <p className="text-sm opacity-70">Современная оптика в Нарве</p>
+                                    <img
+                                        src="/favicon/icon.svg"
+                                        alt="Ida Optika Logo"
+                                        className="w-auto h-auto "
+                                    />
                                 </div>
                             </div>
                         </div>
