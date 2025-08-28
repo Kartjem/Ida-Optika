@@ -46,7 +46,7 @@ export default function AboutPage() {
     }, []);
 
     return (
-        <VantaWaves variant="page" className="min-h-screen bg-primary-bg">
+        <VantaWaves className="min-h-screen bg-primary-bg">
             <Navigation />
 
             {/* Hero секция */}

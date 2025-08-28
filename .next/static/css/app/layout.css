@@ -779,9 +779,6 @@ video {
 .h-24 {
   height: 6rem;
 }
-.h-32 {
-  height: 8rem;
-}
 .h-4 {
   height: 1rem;
 }
@@ -1031,9 +1028,6 @@ video {
 .rounded-custom {
   border-radius: 0.75rem;
 }
-.rounded-full {
-  border-radius: 9999px;
-}
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -1077,9 +1071,6 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
-.bg-white\/80 {
-  background-color: rgb(255 255 255 / 0.8);
-}
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1111,10 +1102,6 @@ video {
 }
 .to-transparent {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .p-2 {
   padding: 0.5rem;
@@ -1339,13 +1326,20 @@ video {
     --font-inter: 'Inter', sans-serif;
     --font-lora: 'Lora', serif;
 
-    --color-bg: #1A1A1A;  
-    --color-bg-secondary: #242424;
-    --color-text: #F5F5F5;
-    --color-text-muted: #A3A3A3;
-    --color-primary: #B91C1C;
-    --color-primary-hover: #991B1B;
-    --color-border: #3D3D3D;
+    --color-bg: #4db4b0cf;
+    /* Мятный белый фон */
+    --color-bg-secondary: #a1dff4;
+    /* Светло-мятный */
+    --color-text: #2C5F5F;
+    /* Темно-мятный для текста */
+    --color-text-muted: #5A8E8E;
+    /* Приглушенный мятный */
+    --color-primary: #20B2AA;
+    /* Бирюзовый акцент */
+    --color-primary-hover: #1E9A92;
+    /* Темнее бирюзовый */
+    --color-border: #B8E6E6;
+    /* Мятная граница */
 }
 
 * {

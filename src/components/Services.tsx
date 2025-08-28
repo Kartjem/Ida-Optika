@@ -75,7 +75,6 @@ export default function Services() {
     ];
 
     return (
-        <VantaWaves variant="subtle">
             <section
                 id="services"
                 ref={sectionRef}
@@ -127,6 +126,5 @@ export default function Services() {
                     </div>
                 </div>
             </section>
-        </VantaWaves>
     );
 }

@@ -95,7 +95,7 @@ export default function GlassesPage() {
     }, []);
 
     return (
-        <VantaWaves variant="page" className="min-h-screen bg-primary-bg">
+        <VantaWaves className="min-h-screen bg-primary-bg">
             <Navigation />
 
             {/* Заголовок страницы */}

@@ -6,7 +6,6 @@ import { VANTA_COLORS } from '@/constants';
 interface VantaWavesProps {
     className?: string;
     children?: React.ReactNode;
-    variant?: 'hero' | 'page' | 'subtle';
 }
 
 declare global {
@@ -16,7 +15,7 @@ declare global {
     }
 }
 
-export default function VantaWaves({ className = '', children, variant = 'page' }: VantaWavesProps) {
+export default function VantaWaves({ className = '', children }: VantaWavesProps) {
     const vantaRef = useRef<HTMLDivElement>(null);
     const vantaEffect = useRef<any>(null);
 
@@ -65,32 +64,12 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
         };
 
         const getVariantConfig = () => {
-            switch (variant) {
-                case 'hero':
-                    return {
-                        color: VANTA_COLORS.hero,
-                        shininess: 30.00,
-                        waveHeight: 25.00,
-                        waveSpeed: 0.60,
-                        zoom: 0.75
-                    };
-                case 'subtle':
-                    return {
-                        color: VANTA_COLORS.subtle,
-                        shininess: 15.00,
-                        waveHeight: 10.00,
-                        waveSpeed: 0.30,
-                        zoom: 0.90
-                    };
-                default: // 'page'
-                    return {
-                        color: VANTA_COLORS.page,
-                        shininess: 20.00,
-                        waveHeight: 15.00,
-                        waveSpeed: 0.40,
-                        zoom: 0.80
-                    };
-            }
+            return {
+                color: VANTA_COLORS.hero,
+                shininess: 0.00,        // Полностью убираем блеск
+                waveHeight: 10.00,      // Нормальная высота волн
+                waveSpeed: 0.5,         // Медленное движение
+            };
         };
 
         const initVanta = async () => {
@@ -126,7 +105,7 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
         };
 
         // Небольшая задержка для рендеринга компонента
-        const timer = setTimeout(initVanta, 300);
+        const timer = setTimeout(initVanta);
 
         return () => {
             isMounted = false;
@@ -140,14 +119,14 @@ export default function VantaWaves({ className = '', children, variant = 'page' 
                 vantaEffect.current = null;
             }
         };
-    }, [variant]);
+    }, []);
 
     return (
         <div
             ref={vantaRef}
             className={`relative w-full h-full ${className}`}
             style={{
-                minHeight: variant === 'hero' ? '100vh' : '50vh',
+                minHeight: '100vh',
                 width: '100%',
                 position: 'relative',
                 overflow: 'hidden'

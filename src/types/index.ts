@@ -12,7 +12,7 @@ export interface NavItem {
 
 // VantaWaves
 export interface VantaWavesProps extends BaseComponentProps {
-    variant?: 'hero' | 'page' | 'subtle';
+    variant?: 'hero';
 }
 
 // Услуги

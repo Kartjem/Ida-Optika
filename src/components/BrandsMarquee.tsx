@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-import VantaWaves from './VantaWavesUniversal';
 
 const brands = [
     { name: 'Ray-Ban', logo: '/assets/images/brand-logos/ray-ban.svg' },
@@ -14,7 +12,6 @@ const brands = [
 
 export default function BrandsMarquee() {
     return (
-        <VantaWaves variant="subtle">
             <section className="relative py-16 bg-primary-bg overflow-hidden">
                 <div className="flex whitespace-nowrap">
                     {/* Первый набор логотипов */}
@@ -50,6 +47,5 @@ export default function BrandsMarquee() {
                     </div>
                 </div>
             </section>
-        </VantaWaves>
     );
 }

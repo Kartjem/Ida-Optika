@@ -16,7 +16,7 @@ export default function ServicesPage() {
     // Анимации отключены по запросу пользователя
 
     return (
-        <VantaWaves variant="page" className="min-h-screen bg-primary-bg">
+        <VantaWaves className="min-h-screen bg-primary-bg">
             <Navigation />
 
             {/* Hero секция */}

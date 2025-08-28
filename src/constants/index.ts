@@ -79,9 +79,6 @@ export const NAVIGATION_ITEMS = [
     { href: '/contact', label: 'Контакты' },
 ];
 
-// Конфигурация цветов для VantaWaves
 export const VANTA_COLORS = {
-    hero: 0x4a0e0e,      // Темно-красный для героической секции
-    page: 0x330808,      // Средний красно-черный для страниц
-    subtle: 0x2a0505,    // Тонкий красно-черный для компонентов
+    hero: 0x6f88,    // Мятный белый (#F0F8F8)
 };

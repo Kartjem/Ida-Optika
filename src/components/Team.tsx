@@ -67,7 +67,7 @@ export default function Team() {
     }, []);
 
     return (
-        <VantaWaves variant="subtle">
+        <VantaWaves>
             <section
                 id="about"
                 ref={sectionRef}
