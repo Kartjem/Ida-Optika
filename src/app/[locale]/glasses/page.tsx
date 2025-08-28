@@ -8,7 +8,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import { Glasses as GlassesIcon } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import VantaWaves from '@/components/VantaWavesUniversal';
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -95,7 +94,7 @@ export default function GlassesPage() {
     }, []);
 
     return (
-        <VantaWaves className="min-h-screen bg-primary-bg">
+        <div className="min-h-screen bg-primary-bg">
             <Navigation />
 
             {/* Заголовок страницы */}
@@ -177,6 +176,6 @@ export default function GlassesPage() {
             </section>
 
             <Footer />
-        </VantaWaves>
+        </div>
     );
 }

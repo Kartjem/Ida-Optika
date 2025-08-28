@@ -28,7 +28,6 @@ module.exports = {
 				'slide-up': 'slideUp 0.8s ease-out forwards',
 				'marquee': 'marquee 25s linear infinite',
 				'gradient-shift': 'gradient-shift 10s ease infinite',
-				'wave-float': 'wave-float 6s ease-in-out infinite',
 			},
 			keyframes: {
 				fadeUp: {
@@ -73,14 +72,6 @@ module.exports = {
 					},
 					'50%': {
 						'background-position': '100% 50%',
-					},
-				},
-				'wave-float': {
-					'0%, 100%': {
-						transform: 'translateY(0px) rotate(0deg)',
-					},
-					'50%': {
-						transform: 'translateY(-20px) rotate(180deg)',
 					},
 				},
 			},

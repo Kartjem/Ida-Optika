@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import VantaWaves from '@/components/VantaWavesUniversal';
 import { SERVICES } from '@/constants';
 
 export default function ServicesPage() {
@@ -16,7 +15,7 @@ export default function ServicesPage() {
     // Анимации отключены по запросу пользователя
 
     return (
-        <VantaWaves className="min-h-screen bg-primary-bg">
+        <div className="min-h-screen bg-primary-bg">
             <Navigation />
 
             {/* Hero секция */}
@@ -100,6 +99,6 @@ export default function ServicesPage() {
             </section>
 
             <Footer />
-        </VantaWaves>
+        </div>
     );
 }

@@ -17,15 +17,12 @@
     "next": "^15.5.2",
     "next-intl": "^3.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "three": "^0.179.1",
-    "vanta": "^0.5.24"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "@types/three": "^0.179.0",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.0.0",

@@ -78,7 +78,3 @@ export const NAVIGATION_ITEMS = [
     { href: '/glasses', label: 'Очки' },
     { href: '/contact', label: 'Контакты' },
 ];
-
-export const VANTA_COLORS = {
-    hero: 0x4F46E5,
-};

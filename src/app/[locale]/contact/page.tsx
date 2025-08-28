@@ -8,7 +8,6 @@ import { Phone, MapPin, Building2, Clock, Car, Bus } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import GoogleMap from '@/components/GoogleMap';
-import VantaWaves from '@/components/VantaWavesUniversal';
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -87,7 +86,7 @@ export default function ContactPage() {
     }, []);
 
     return (
-        <VantaWaves className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-light via-primary-dark to-primary-accent">
             <Navigation />
 
             {/* Hero секция */}
@@ -204,6 +203,6 @@ export default function ContactPage() {
 
 
             <Footer />
-        </VantaWaves>
+        </div>
     );
 }

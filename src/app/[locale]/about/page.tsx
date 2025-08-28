@@ -7,7 +7,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { UserCheck, Glasses } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import VantaWaves from '@/components/VantaWavesUniversal';
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +45,7 @@ export default function AboutPage() {
     }, []);
 
     return (
-        <VantaWaves className="min-h-screen bg-primary-bg">
+        <div className="min-h-screen bg-primary-bg">
             <Navigation />
 
             {/* Hero секция */}
@@ -129,6 +128,6 @@ export default function AboutPage() {
                 </div>
             </section>
             <Footer />
-        </VantaWaves>
+        </div>
     );
 }

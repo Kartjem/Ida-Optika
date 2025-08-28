@@ -10,11 +10,6 @@ export interface NavItem {
     href: string;
 }
 
-// VantaWaves
-export interface VantaWavesProps extends BaseComponentProps {
-    variant?: 'hero';
-}
-
 // Услуги
 export interface Service {
     icon: React.ComponentType<any>;

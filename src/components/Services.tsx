@@ -6,7 +6,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { Eye, Glasses, CircleDot } from 'lucide-react';
-import VantaWaves from './VantaWavesUniversal';
 import { useLocale } from 'next-intl';
 
 if (typeof window !== 'undefined') {

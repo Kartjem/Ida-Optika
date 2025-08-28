@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap } from 'gsap';
 import Image from 'next/image';
-import VantaWaves from './VantaWavesUniversal';
 
 export default function Hero() {
     const heroRef = useRef<HTMLDivElement>(null);
@@ -40,7 +39,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <VantaWaves className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-light via-primary-dark to-primary-accent">
             {/* Контент */}
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h1
@@ -89,6 +88,6 @@ export default function Hero() {
                     />
                 </svg>
             </div>
-        </VantaWaves>
+        </div>
     );
 }

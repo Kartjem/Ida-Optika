@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { UserCheck, Glasses } from 'lucide-react';
-import VantaWaves from './VantaWavesUniversal';
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
